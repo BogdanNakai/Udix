@@ -1208,10 +1208,6 @@ body {
     font-size: 1rem;
   }
 
-  .header__body {
-    gap: 5.375rem;
-  }
-
   .footer {
     padding-top: 3.75rem;
   }
@@ -1601,6 +1597,10 @@ body {
             order: 3;
   }
 
+  .menu::before {
+    display: none;
+  }
+
   .menu__body {
     position: fixed;
     z-index: 1;
@@ -1920,10 +1920,6 @@ body {
     font-size: 0.875rem;
   }
 
-  .header__body {
-    gap: 2.6875rem;
-  }
-
   .footer {
     padding-top: 2.5rem;
   }
@@ -2091,18 +2087,6 @@ body {
 @supports not (font-size: clamp( 0.875rem , 0.8181818182rem  +  0.2424242424vw , 1rem )) {
     .text {
       font-size: calc(0.875rem + 0.125 * (100vw - 23.4375rem) / 51.5625);
-    }
-}
-
-@supports (gap: clamp( 2.6875rem , 1.4659090909rem  +  5.2121212121vw , 5.375rem )) {
-    .header__body {
-      gap: clamp( 2.6875rem , 1.4659090909rem  +  5.2121212121vw , 5.375rem );
-    }
-}
-
-@supports not (gap: clamp( 2.6875rem , 1.4659090909rem  +  5.2121212121vw , 5.375rem )) {
-    .header__body {
-      gap: calc(2.6875rem + 2.6875 * (100vw - 23.4375rem) / 51.5625);
     }
 }
 
@@ -2504,6 +2488,18 @@ body {
 }
 
 @media (min-width: 48em) and (max-width: 120em) {
+@supports (gap: clamp( 2.6875rem , 0.8958333333rem  +  3.7326388889vw , 5.375rem )) {
+    .header__body {
+      gap: clamp( 2.6875rem , 0.8958333333rem  +  3.7326388889vw , 5.375rem );
+    }
+}
+
+@supports not (gap: clamp( 2.6875rem , 0.8958333333rem  +  3.7326388889vw , 5.375rem )) {
+    .header__body {
+      gap: calc(2.6875rem + 2.6875 * (100vw - 48rem) / 72);
+    }
+}
+
 @supports (gap: clamp( 0.875rem , 0.4583333333rem  +  0.8680555556vw , 1.5rem )) {
     .header__box-button {
       gap: clamp( 0.875rem , 0.4583333333rem  +  0.8680555556vw , 1.5rem );

@@ -3664,7 +3664,7 @@
     }
     function initSliders() {
         if (document.querySelector(".swiper")) {
-            new core(".leading-provider-content__slider, .leading-provider-img-content__slider", {
+            new core(".leading-provider__swiper", {
                 modules: [ Navigation, Pagination ],
                 observer: true,
                 observeParents: true,
@@ -3673,6 +3673,7 @@
                 autoHeight: true,
                 speed: 800,
                 simulateTouch: false,
+                controller: {},
                 pagination: {
                     el: ".pagination",
                     type: "fraction"
